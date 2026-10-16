@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard - ScamShield</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <i><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></i>
+      ScamShield
+    </div>
+    <nav>
+      <a href="/" class="navlink">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        Check a message
+      </a>
+      <a href="/dashboard.html" class="navlink active">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Dashboard
+      </a>
+    </nav>
+    <div class="side-foot"><b>ScamShield</b>Spot scam messages before you act on them</div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <h1>Dashboard</h1>
+      <p>Scam messages reported by users, by state and by tell-tale words.</p>
+    </header>
+    <div class="content dash">
+      <div class="kpis">
+        <div class="card kpi"><b id="kTotal">0</b><span>Reports</span></div>
+        <div class="card kpi"><b id="kStates">0</b><span>States reporting</span></div>
+        <div class="card kpi"><b id="kTopState">-</b><span>Most reports</span></div>
+        <div class="card kpi"><b id="kTopFlag">-</b><span>Top red flag</span></div>
+      </div>
+      <section class="card">
+        <h2>Reports by state</h2>
+        <p class="hint">Where scam messages are being reported from.</p>
+        <div class="bars" id="stateBars"></div>
+      </section>
+      <section class="card">
+        <h2>Most common red flags</h2>
+        <p class="hint">Words that appear most in reported scams.</p>
+        <div class="bars" id="flagBars"></div>
+      </section>
+      <section class="card wide">
+        <h2>Reported messages</h2>
+        <p class="hint">Search reports by any word. Reports are removed automatically after 90 days.</p>
+        <input class="search" id="q" placeholder="Search reports, for example KYC or lottery">
+        <div id="list"></div>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="/dashboard.js"></script>
+</body>
+</html>

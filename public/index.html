@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScamShield</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <i><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></i>
+      ScamShield
+    </div>
+    <nav>
+      <a href="/" class="navlink active">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        Check a message
+      </a>
+    <a href="/dashboard.html" class="navlink">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Dashboard
+      </a>
+    </nav>
+    <div class="side-foot"><b>ScamShield</b>Spot scam messages before you act on them</div>
+  </aside>
+
+  <div class="main">
+    <header class="top">
+      <h1>Check a message</h1>
+      <p>Paste an SMS or WhatsApp forward and see how risky it looks.</p>
+    </header>
+
+    <div class="content">
+      <section class="card">
+        <h2>Message</h2>
+        <p class="hint">Paste the full text. Nothing is sent anywhere except your own server.</p>
+        <textarea id="msg" placeholder="Paste a suspicious message here..."></textarea>
+        <div class="row">
+          <button class="btn primary" id="checkBtn" type="button">Check message</button>
+          <button class="btn" id="clearBtn" type="button">Clear</button>
+          <span class="spacer"></span>
+          <button class="link" id="exScam" type="button">Try a scam example</button>
+          <button class="link" id="exSafe" type="button">Try a safe example</button>
+        </div>
+      </section>
+
+      <section class="card" id="result">
+        <div class="empty"><b>No result yet</b>Paste a message and press Check message.</div>
+      </section>
+    </div>
+  </div>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
+
